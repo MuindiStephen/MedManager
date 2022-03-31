@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#9aa1b3</color>
+    <color name="colorPrimary">#FAFAFA</color>
+    <color name="colorAccent">#BBC3D7</color>
+
+    <color name="secondary_text">#757575</color>
+    <color name="primary_text">#212121</color>
+
+    <color name="divider_color">#BDBDBD</color>
+
+    <color name="snow">#FAFAFA</color>
+    <color name="link_water">#BBC3D7</color>
+
+    <color name="layout_background">#E6F1FE</color>
+
+    <!--Profile related color #dfeded-->
+    <color name="profile_primary_text">#868CA0</color>
+    <color name="profile_secondary_text">#DCE5F8</color>
+    <color name="profile_secondary_text2">#BFCCDB</color>
+
+    <color name="profile_blue">#A6CFFF</color>
+    <color name="profile_lilak">#B99EF0</color>
+    <color name="profile_yellow">#FFE74C</color>
+</resources>

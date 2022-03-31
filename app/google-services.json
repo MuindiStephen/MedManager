@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "604457710210",
+    "firebase_url": "https://medmanager-21d99.firebaseio.com",
+    "project_id": "medmanager-21d99",
+    "storage_bucket": "medmanager-21d99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604457710210:android:46657449ce45c215",
+        "android_client_info": {
+          "package_name": "com.android.benhaxe.medmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604457710210-m37d30t0c46c38v0qmactjs1numr0hv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.benhaxe.medmanager",
+            "certificate_hash": "a1370ea85d0a5470058f0b2ed57f089d27e0bf00"
+          }
+        },
+        {
+          "client_id": "604457710210-0qo70o7f2a8mkh5pmge8hc379j68f1sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Zeb93v4TgRfs156zhv3i1b5ZYP6WA1U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604457710210-0qo70o7f2a8mkh5pmge8hc379j68f1sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

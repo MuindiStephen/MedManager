@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MedManager</string>
+
+    <string name="title_activity_account">Account</string>
+    <string name="title_activity_month">Monthly Med</string>
+    <string name="title_activity_add">New Med</string>
+
+    <!--Main menu starts here-->
+    <string name="title_logout">Logout</string>
+    <string name="title_add">Add</string>
+
+    <!--Bottom navigation starts here-->
+    <string name="title_account">Account</string>
+    <string name="title_medicine">Drugs</string>
+    <string name="title_month_view">Months</string>
+
+    <!--Edit text field placeholder here-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="prompt_drug_name">Name</string>
+    <string name="prompt_drug_dosage">Dosage</string>
+    <string name="title_save">Save</string>
+    <string name="title_delete_account">Delete Account</string>
+    <string name="title_search">Search</string>
+    <string name="search_hint">Search...</string>
+
+    <string-array name="drugs_interval">
+        <item>1 Hour</item>
+        <item>2 Hours</item>
+        <item>3 Hours</item>
+        <item>4 Hours</item>
+        <item>5 Hours</item>
+        <item>6 Hours</item>
+        <item>7 Hours</item>
+        <item>8 Hours</item>
+        <item>9 Hours</item>
+        <item>10 Hours</item>
+        <item>11 Hours</item>
+        <item>12 Hours</item>
+    </string-array>
+</resources>

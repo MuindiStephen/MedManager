@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.benhaxe.medmanager.ui.NewMedicine">
+
+    <include layout="@layout/app_bar"/>
+
+    <RelativeLayout
+        android:layout_marginTop="16dp"
+        style="@style/each_add_med_rv">
+        <ImageButton
+            android:id="@+id/img_drugs"
+            android:layout_marginTop="8dp"
+            style="@style/image_buttons"
+            app:srcCompat="@drawable/ic_drug"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_margin="4dp"
+            android:id="@+id/drug_name"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/img_drugs"
+            style="@style/text_input_layout">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_med_name"
+                style="@style/auto_complete_text_view"
+                android:hint="@string/prompt_drug_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusDown="@+id/drug_dosage"
+                android:nextFocusForward="@+id/drug_dosage" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/drug_dosage"
+            android:layout_below="@id/drug_name"
+            style="@style/text_input_layout">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_med_dosage"
+                style="@style/auto_complete_text_view"
+                android:hint="@string/prompt_drug_dosage"
+                android:imeOptions="actionDone"
+                android:inputType="textShortMessage" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/choose_date"
+        android:layout_below="@id/drug_dosage"
+        style="@style/add_med_text_views_headers"
+        android:text="Choose a date"/>
+
+    <RelativeLayout
+        style="@style/each_add_med_rv">
+        <ImageButton
+            android:id="@+id/img_date"
+            style="@style/image_buttons"
+            app:srcCompat="@drawable/ic_month" />
+
+        <TextView
+            style="@style/add_med_text_views"
+            android:id="@+id/tv_start_date"
+            android:layout_toRightOf="@id/img_date"
+            tools:text="Start Date"/>
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_toRightOf="@id/tv_start_date"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/tv_end_date"
+            android:layout_toRightOf="@id/to"
+            style="@style/add_med_text_views"
+            android:text="End Date"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/choose_time"
+        style="@style/add_med_text_views_headers"
+        android:layout_below="@id/drug_dosage"
+        android:text="Drugs Interval"/>
+
+    <RelativeLayout
+        style="@style/each_add_med_rv">
+        <ImageButton
+            android:id="@+id/img_time"
+            style="@style/image_buttons"
+            app:srcCompat="@drawable/ic_time" />
+
+        <Spinner
+            style="@style/add_med_text_views"
+            android:padding="0dp"
+            android:layout_width="match_parent"
+            android:id="@+id/spinner_interval"
+            android:layout_toRightOf="@id/img_time"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/b_navigation_account"
+        android:icon="@drawable/ic_account"
+        android:title="@string/title_account" />
+
+    <item
+        android:id="@+id/b_navigation_medicine"
+        android:icon="@drawable/ic_drug"
+        android:title="@string/title_medicine" />
+
+    <item
+        android:id="@+id/b_navigation_month_view"
+        android:icon="@drawable/ic_month"
+        android:title="@string/title_month_view" />
+
+</menu>

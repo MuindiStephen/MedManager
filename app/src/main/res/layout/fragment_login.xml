@@ -1,0 +1,124 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_in_snack_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.benhaxe.medmanager.accountCreation.LoginFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/snow">
+
+        <ImageView
+            android:id="@+id/img_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="20dp"
+            android:src="@drawable/insurance" />
+
+        <LinearLayout
+            android:id="@+id/ll_account_screen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/img_header"
+            android:layout_margin="5dp"
+            android:background="@drawable/login_signup"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_margin="2dp"
+                style="@style/nav_account_screen"
+                android:background="@drawable/ls_button"
+                android:text="Login" />
+
+            <TextView
+                android:id="@+id/tv_goto_sign_up"
+                style="@style/nav_account_screen"
+                android:text="Sign Up" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_account_screen"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/snow"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:id="@+id/user_input_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
+
+                <android.support.design.widget.TextInputLayout style="@style/text_input_layout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_email"
+                        style="@style/auto_complete_text_view"
+                        android:drawableLeft="@drawable/ic_mail"
+                        android:hint="@string/prompt_email"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusDown="@+id/password"
+                        android:nextFocusForward="@+id/password" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout style="@style/text_input_layout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_password"
+                        style="@style/auto_complete_text_view"
+                        android:drawableLeft="@drawable/ic_password"
+                        android:hint="@string/prompt_password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:text="Forgot Password ?"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    style="@style/button"
+                    android:layout_marginTop="16dp"
+                    android:text="Login" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_google"
+            android:layout_centerHorizontal="true"
+            android:text="OR"
+            android:textSize="16sp" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="4dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

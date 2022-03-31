@@ -1,0 +1,205 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/layout_background"
+    tools:context="com.android.benhaxe.medmanager.ui.ProfileActivity">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/app_bar" />
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:padding="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:contentDescription="Click to set DP"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/ic_person"
+                    app:civ_border_color="@color/profile_lilak"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:id="@+id/user_name"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/profile_primary_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                    android:hint="Full Name" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:id="@+id/region_country"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:inputType="text"
+                    android:padding="4dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/profile_secondary_text2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_name"
+                    android:hint="State, Country" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@+id/region_country" />
+
+                <EditText
+                    android:id="@+id/user_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/profile_blue"
+                    android:hint="mymail@example.cm"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:textColor="@color/profile_secondary_text2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/region_country" />
+
+                <TextView
+                    android:id="@+id/medication_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textColor="@color/profile_yellow"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/vertical_divider"
+                    app:layout_constraintEnd_toStartOf="@+id/vertical_divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/vertical_divider" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Medications"
+                    android:textAlignment="center"
+                    android:textColor="@color/profile_secondary_text2"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/vertical_divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/medication_number" />
+
+                <View
+                    android:id="@+id/vertical_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_email" />
+
+                <TextView
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="@color/profile_lilak"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:id="@+id/medication_month"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/vertical_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vertical_divider"
+                    app:layout_constraintTop_toTopOf="@+id/vertical_divider" />
+
+                <TextView
+                    android:id="@+id/months"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/profile_secondary_text2"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vertical_divider"
+                    app:layout_constraintTop_toBottomOf="@+id/medication_month"
+                    android:text="Months" />
+
+                <View
+                    app:layout_constraintTop_toBottomOf="@+id/months"
+                    android:id="@+id/horizontal_divider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/divider_color" />
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
